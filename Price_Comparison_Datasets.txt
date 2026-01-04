@@ -1,0 +1,310 @@
+================================================================================
+PRICE COMPARISON PLATFORM - DATASET DOCUMENTATION
+================================================================================
+
+This document contains all product data from the 'datasets' directory.
+Data is presented in table format for each platform/category source.
+
+
+################################################################################
+DATASET: Ajio (ajio_products.json)
+Total Items: 5
+################################################################################
+
+         Product Name     Price   Brand
+0  Nike Running Shoes  ₹2999.00    Nike
+1      Adidas T-Shirt  ₹1299.00  Adidas
+2        Levi's Jeans  ₹3499.00  Levi's
+3       Puma Sneakers  ₹2499.00    Puma
+4           H&M Dress  ₹1999.00     H&M
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Amazon (amazon_products.json)
+Total Items: 10
+################################################################################
+
+                Product Name      Price      Brand     Category
+0               Amul Milk 1L     ₹62.00       Amul        dairy
+1  Nestle Maggi Noodles 280g     ₹42.00     Nestle      noodles
+2       Britannia Bread 400g     ₹32.00  Britannia       bakery
+3            Coca Cola 600ml     ₹37.00  Coca Cola    beverages
+4      Lays Potato Chips 50g     ₹17.00       Lays       snacks
+5            iPhone 14 128GB  ₹69900.00      Apple  smartphones
+6         Samsung Galaxy A54  ₹38999.00    Samsung  smartphones
+7         Nike Air Max Shoes   ₹7995.00       Nike     footwear
+8       Adidas Running Shoes   ₹6499.00     Adidas     footwear
+9               Levi's Jeans   ₹2999.00     Levi's     clothing
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Beauty Nykaa (beauty_nykaa.json)
+Total Items: 10
+################################################################################
+
+                  Product Name     Price              Brand
+0    Lakme Absolute Foundation  ₹1050.00              Lakme
+1         Nykaa Matte Lipstick   ₹499.00              Nykaa
+2           Himalaya Face Wash   ₹145.00           Himalaya
+3        Olay Regenerist Serum  ₹1999.00               Olay
+4        L'Oreal Paris Shampoo   ₹399.00            L'Oreal
+5           Maybelline Mascara   ₹699.00         Maybelline
+6  Neutrogena Sunscreen SPF 50   ₹849.00         Neutrogena
+7    The Body Shop Body Butter  ₹1695.00      The Body Shop
+8     Plum Green Tea Face Mask   ₹345.00               Plum
+9   Forest Essentials Face Oil  ₹2250.00  Forest Essentials
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Bigbasket (bigbasket_products.json)
+Total Items: 5
+################################################################################
+
+                Product Name   Price      Brand
+0               Amul Milk 1L  ₹66.00       Amul
+1  Nestle Maggi Noodles 280g  ₹46.00     Nestle
+2       Britannia Bread 400g  ₹36.00  Britannia
+3            Coca Cola 600ml  ₹41.00  Coca Cola
+4      Lays Potato Chips 50g  ₹21.00       Lays
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Blinkit (blinkit_products.json)
+Total Items: 7
+################################################################################
+
+                Product Name   Price      Brand
+0               Amul Milk 1L  ₹60.00       Amul
+1  Nestle Maggi Noodles 280g  ₹40.00     Nestle
+2       Britannia Bread 400g  ₹30.00  Britannia
+3            Coca Cola 600ml  ₹40.00  Coca Cola
+4      Lays Potato Chips 50g  ₹18.00       Lays
+5          Fresh Bananas 1kg  ₹45.00      Fresh
+6              Tata Salt 1kg  ₹22.00       Tata
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Electronics Amazon (electronics_amazon.json)
+Total Items: 10
+################################################################################
+
+                 Product Name       Price    Brand      Category
+0         iPhone 15 Pro 256GB  ₹134900.00    Apple   smartphones
+1    Samsung Galaxy S24 Ultra  ₹129999.00  Samsung   smartphones
+2      MacBook Pro 14-inch M3  ₹199900.00    Apple       laptops
+3          Dell XPS 15 Laptop  ₹159990.00     Dell       laptops
+4  Sony WH-1000XM5 Headphones   ₹29990.00     Sony    headphones
+5      iPad Air 11-inch 256GB   ₹74900.00    Apple       tablets
+6         Canon EOS R8 Camera  ₹179990.00    Canon       cameras
+7          LG 65-inch OLED TV  ₹149990.00       LG   televisions
+8        Apple Watch Series 9   ₹41900.00    Apple  smartwatches
+9    Samsung 55-inch Neo QLED   ₹89990.00  Samsung   televisions
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Electronics (electronics_products.json)
+Total Items: 8
+################################################################################
+
+                 Product Name       Price    Brand
+0             iPhone 15 128GB   ₹79900.00    Apple
+1    Samsung Galaxy S24 256GB   ₹74999.00  Samsung
+2      MacBook Air M2 13-inch  ₹114900.00    Apple
+3          Dell XPS 13 Laptop   ₹89990.00     Dell
+4  Sony WH-1000XM5 Headphones   ₹29990.00     Sony
+5      iPad Pro 11-inch 256GB   ₹89900.00    Apple
+6         Canon EOS R6 Camera  ₹189990.00    Canon
+7      LG 55-inch 4K Smart TV   ₹54990.00       LG
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Fashion Myntra (fashion_myntra.json)
+Total Items: 10
+################################################################################
+
+                     Product Name      Price           Brand
+0          Nike Air Jordan 1 High  ₹12795.00            Nike
+1            Adidas Ultraboost 23  ₹17999.00          Adidas
+2       Levi's 501 Original Jeans   ₹3999.00          Levi's
+3           Zara Oversized Blazer   ₹5990.00            Zara
+4      H&M Organic Cotton T-Shirt    ₹999.00             H&M
+5              Puma RS-X Sneakers   ₹8999.00            Puma
+6       Tommy Hilfiger Polo Shirt   ₹3499.00  Tommy Hilfiger
+7              Calvin Klein Jeans   ₹4999.00    Calvin Klein
+8  Converse Chuck Taylor All Star   ₹3999.00        Converse
+9              Mango Floral Dress   ₹2999.00           Mango
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Flipkart (flipkart_products.json)
+Total Items: 8
+################################################################################
+
+               Product Name      Price    Brand
+0           iPhone 15 128GB  ₹78999.00    Apple
+1  Samsung Galaxy S24 256GB  ₹73999.00  Samsung
+2    Nike Air Force 1 White   ₹7995.00     Nike
+3      Adidas Ultraboost 22  ₹16999.00   Adidas
+4     Levi's 511 Slim Jeans   ₹2799.00   Levi's
+5        H&M Cotton T-Shirt    ₹799.00      H&M
+6         Zara Formal Shirt   ₹2990.00     Zara
+7        Puma Running Shoes   ₹4999.00     Puma
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Home Kitchen (home_kitchen.json)
+Total Items: 10
+################################################################################
+
+                 Product Name      Price         Brand
+0    Philips Air Fryer HD9252  ₹12995.00       Philips
+1  Prestige Induction Cooktop   ₹2999.00      Prestige
+2       IKEA HEMNES Bed Frame  ₹15990.00          IKEA
+3    Godrej 190L Refrigerator  ₹18990.00        Godrej
+4    Bajaj Mixer Grinder 750W   ₹3499.00         Bajaj
+5   Urban Ladder Dining Table  ₹24999.00  Urban Ladder
+6   Whirlpool Washing Machine  ₹22990.00     Whirlpool
+7  Hawkins Pressure Cooker 5L   ₹2199.00       Hawkins
+8  Nilkamal Plastic Chair Set   ₹3999.00      Nilkamal
+9    Borosil Glass Dinner Set   ₹1899.00       Borosil
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Instamart (instamart_products.json)
+Total Items: 5
+################################################################################
+
+                Product Name   Price      Brand
+0               Amul Milk 1L  ₹70.00       Amul
+1  Nestle Maggi Noodles 280g  ₹50.00     Nestle
+2       Britannia Bread 400g  ₹40.00  Britannia
+3            Coca Cola 600ml  ₹45.00  Coca Cola
+4      Lays Potato Chips 50g  ₹25.00       Lays
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Meesho (meesho_products.json)
+Total Items: 5
+################################################################################
+
+         Product Name     Price   Brand
+0  Nike Running Shoes  ₹2799.00    Nike
+1      Adidas T-Shirt  ₹1199.00  Adidas
+2        Levi's Jeans  ₹3299.00  Levi's
+3       Puma Sneakers  ₹2299.00    Puma
+4           H&M Dress  ₹1799.00     H&M
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Myntra (myntra_products.json)
+Total Items: 6
+################################################################################
+
+         Product Name     Price   Brand
+0  Nike Air Max Shoes  ₹9499.00    Nike
+1      Adidas T-Shirt  ₹1199.00  Adidas
+2        Levi's Jeans  ₹3299.00  Levi's
+3          Zara Dress  ₹2499.00    Zara
+4          H&M Jacket  ₹1999.00     H&M
+5       Puma Sneakers  ₹4999.00    Puma
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Nykaa (nykaa_products.json)
+Total Items: 5
+################################################################################
+
+                Product Name    Price          Brand
+0             Lakme Lipstick  ₹299.00          Lakme
+1         Maybelline Mascara  ₹399.00     Maybelline
+2           Nivea Face Cream  ₹199.00          Nivea
+3            L'Oreal Shampoo  ₹249.00        L'Oreal
+4  The Body Shop Body Lotion  ₹599.00  The Body Shop
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Shopsy (shopsy_products.json)
+Total Items: 5
+################################################################################
+
+         Product Name     Price   Brand
+0  Nike Running Shoes  ₹2899.00    Nike
+1      Adidas T-Shirt  ₹1249.00  Adidas
+2        Levi's Jeans  ₹3399.00  Levi's
+3       Puma Sneakers  ₹2399.00    Puma
+4           H&M Dress  ₹1899.00     H&M
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Sports Fitness (sports_fitness.json)
+Total Items: 10
+################################################################################
+
+                      Product Name      Price      Brand
+0        Decathlon Treadmill T540C  ₹54999.00  Decathlon
+1           Adidas Football Size 5   ₹1999.00     Adidas
+2      Nike Dri-FIT Running Shorts   ₹2495.00       Nike
+3           Yonex Badminton Racket   ₹8999.00      Yonex
+4                   Reebok Gym Bag   ₹1799.00     Reebok
+5             Puma Training Gloves    ₹999.00       Puma
+6                Cosco Cricket Bat   ₹2499.00      Cosco
+7                 Nivia Basketball   ₹1299.00      Nivia
+8  Fitbit Charge 5 Fitness Tracker  ₹19999.00     Fitbit
+9     Boldfit Resistance Bands Set    ₹799.00    Boldfit
+
+--------------------------------------------------------------------------------
+
+
+################################################################################
+DATASET: Zepto (zepto_products.json)
+Total Items: 7
+################################################################################
+
+                Product Name    Price          Brand
+0               Amul Milk 1L   ₹65.00           Amul
+1  Nestle Maggi Noodles 280g   ₹45.00         Nestle
+2       Britannia Bread 400g   ₹35.00      Britannia
+3            Coca Cola 600ml   ₹42.00      Coca Cola
+4      Lays Potato Chips 50g   ₹20.00           Lays
+5    Ben & Jerry's Ice Cream  ₹450.00  Ben & Jerry's
+6      Red Bull Energy Drink  ₹125.00       Red Bull
+
+--------------------------------------------------------------------------------
+
+
+================================================================================
+SUMMARY
+================================================================================
+Total Files Processed: 17
+Total Products Documented: 126
+================================================================================
