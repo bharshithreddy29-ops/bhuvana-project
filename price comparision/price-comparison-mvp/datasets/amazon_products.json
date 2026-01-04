@@ -1,0 +1,72 @@
+[
+    {
+        "product_name": "Amul Milk 1L",
+        "brand": "Amul",
+        "price": 62.0,
+        "category": "dairy",
+        "image_url": "/static/images/products/amul_milk.jpg"
+    },
+    {
+        "product_name": "Nestle Maggi Noodles 280g",
+        "brand": "Nestle",
+        "price": 42.0,
+        "category": "noodles",
+        "image_url": "/static/images/products/maggi_noodles.jpg"
+    },
+    {
+        "product_name": "Britannia Bread 400g",
+        "brand": "Britannia",
+        "price": 32.0,
+        "category": "bakery",
+        "image_url": "/static/images/products/britannia_bread.jpg"
+    },
+    {
+        "product_name": "Coca Cola 600ml",
+        "brand": "Coca Cola",
+        "price": 37.0,
+        "category": "beverages",
+        "image_url": "/static/images/products/coca_cola.jpg"
+    },
+    {
+        "product_name": "Lays Potato Chips 50g",
+        "brand": "Lays",
+        "price": 17.0,
+        "category": "snacks",
+        "image_url": "/static/images/products/lays_chips.jpg"
+    },
+    {
+        "product_name": "iPhone 14 128GB",
+        "brand": "Apple",
+        "price": 69900.0,
+        "category": "smartphones",
+        "image_url": "/static/images/products/iphone14.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy A54",
+        "brand": "Samsung",
+        "price": 38999.0,
+        "category": "smartphones",
+        "image_url": "/static/images/products/galaxy_a54.jpg"
+    },
+    {
+        "product_name": "Nike Air Max Shoes",
+        "brand": "Nike",
+        "price": 7995.0,
+        "category": "footwear",
+        "image_url": "/static/images/products/nike_airmax.jpg"
+    },
+    {
+        "product_name": "Adidas Running Shoes",
+        "brand": "Adidas",
+        "price": 6499.0,
+        "category": "footwear",
+        "image_url": "/static/images/products/adidas_running.jpg"
+    },
+    {
+        "product_name": "Levi's Jeans",
+        "brand": "Levi's",
+        "price": 2999.0,
+        "category": "clothing",
+        "image_url": "/static/images/products/levis_jeans.jpg"
+    }
+]

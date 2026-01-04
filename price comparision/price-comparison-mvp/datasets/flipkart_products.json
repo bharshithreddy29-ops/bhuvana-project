@@ -1,0 +1,50 @@
+[
+    {
+        "product_name": "iPhone 15 128GB",
+        "brand": "Apple",
+        "price": 78999.0,
+        "image_url": "/static/images/products/iphone15.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy S24 256GB",
+        "brand": "Samsung",
+        "price": 73999.0,
+        "image_url": "/static/images/products/galaxy_s24.jpg"
+    },
+    {
+        "product_name": "Nike Air Force 1 White",
+        "brand": "Nike",
+        "price": 7995.0,
+        "image_url": "/static/images/products/nike_air_force.jpg"
+    },
+    {
+        "product_name": "Adidas Ultraboost 22",
+        "brand": "Adidas",
+        "price": 16999.0,
+        "image_url": "/static/images/products/adidas_ultraboost.jpg"
+    },
+    {
+        "product_name": "Levi's 511 Slim Jeans",
+        "brand": "Levi's",
+        "price": 2799.0,
+        "image_url": "/static/images/products/levis_511.jpg"
+    },
+    {
+        "product_name": "H&M Cotton T-Shirt",
+        "brand": "H&M",
+        "price": 799.0,
+        "image_url": "/static/images/products/hm_tshirt.jpg"
+    },
+    {
+        "product_name": "Zara Formal Shirt",
+        "brand": "Zara",
+        "price": 2990.0,
+        "image_url": "/static/images/products/zara_shirt.jpg"
+    },
+    {
+        "product_name": "Puma Running Shoes",
+        "brand": "Puma",
+        "price": 4999.0,
+        "image_url": "/static/images/products/puma_running.jpg"
+    }
+]

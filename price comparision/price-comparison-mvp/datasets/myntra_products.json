@@ -1,0 +1,38 @@
+[
+    {
+        "product_name": "Nike Air Max Shoes",
+        "brand": "Nike",
+        "price": 9499.0,
+        "image_url": "/static/images/nike_shoes.jpg"
+    },
+    {
+        "product_name": "Adidas T-Shirt",
+        "brand": "Adidas",
+        "price": 1199.0,
+        "image_url": "/static/images/adidas_tshirt.jpg"
+    },
+    {
+        "product_name": "Levi's Jeans",
+        "brand": "Levi's",
+        "price": 3299.0,
+        "image_url": "/static/images/levis_jeans.jpg"
+    },
+    {
+        "product_name": "Zara Dress",
+        "brand": "Zara",
+        "price": 2499.0,
+        "image_url": "/static/images/zara_dress.jpg"
+    },
+    {
+        "product_name": "H&M Jacket",
+        "brand": "H&M",
+        "price": 1999.0,
+        "image_url": "/static/images/hm_jacket.jpg"
+    },
+    {
+        "product_name": "Puma Sneakers",
+        "brand": "Puma",
+        "price": 4999.0,
+        "image_url": "/static/images/puma_sneakers.jpg"
+    }
+]

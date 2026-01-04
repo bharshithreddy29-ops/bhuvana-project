@@ -1,0 +1,62 @@
+[
+    {
+        "product_name": "Decathlon Treadmill T540C",
+        "brand": "Decathlon",
+        "price": 54999.0,
+        "image_url": "/static/images/products/decathlon_treadmill.jpg"
+    },
+    {
+        "product_name": "Adidas Football Size 5",
+        "brand": "Adidas",
+        "price": 1999.0,
+        "image_url": "/static/images/products/adidas_football.jpg"
+    },
+    {
+        "product_name": "Nike Dri-FIT Running Shorts",
+        "brand": "Nike",
+        "price": 2495.0,
+        "image_url": "/static/images/products/nike_running_shorts.jpg"
+    },
+    {
+        "product_name": "Yonex Badminton Racket",
+        "brand": "Yonex",
+        "price": 8999.0,
+        "image_url": "/static/images/products/yonex_racket.jpg"
+    },
+    {
+        "product_name": "Reebok Gym Bag",
+        "brand": "Reebok",
+        "price": 1799.0,
+        "image_url": "/static/images/products/reebok_gym_bag.jpg"
+    },
+    {
+        "product_name": "Puma Training Gloves",
+        "brand": "Puma",
+        "price": 999.0,
+        "image_url": "/static/images/products/puma_gloves.jpg"
+    },
+    {
+        "product_name": "Cosco Cricket Bat",
+        "brand": "Cosco",
+        "price": 2499.0,
+        "image_url": "/static/images/products/cosco_bat.jpg"
+    },
+    {
+        "product_name": "Nivia Basketball",
+        "brand": "Nivia",
+        "price": 1299.0,
+        "image_url": "/static/images/products/nivia_basketball.jpg"
+    },
+    {
+        "product_name": "Fitbit Charge 5 Fitness Tracker",
+        "brand": "Fitbit",
+        "price": 19999.0,
+        "image_url": "/static/images/products/fitbit_charge5.jpg"
+    },
+    {
+        "product_name": "Boldfit Resistance Bands Set",
+        "brand": "Boldfit",
+        "price": 799.0,
+        "image_url": "/static/images/products/boldfit_bands.jpg"
+    }
+]

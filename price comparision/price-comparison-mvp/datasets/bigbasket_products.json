@@ -1,0 +1,32 @@
+[
+    {
+        "product_name": "Amul Milk 1L",
+        "brand": "Amul",
+        "price": 66.0,
+        "image_url": "/static/images/amul_milk.jpg"
+    },
+    {
+        "product_name": "Nestle Maggi Noodles 280g",
+        "brand": "Nestle",
+        "price": 46.0,
+        "image_url": "/static/images/maggi.jpg"
+    },
+    {
+        "product_name": "Britannia Bread 400g",
+        "brand": "Britannia",
+        "price": 36.0,
+        "image_url": "/static/images/britannia_bread.jpg"
+    },
+    {
+        "product_name": "Coca Cola 600ml",
+        "brand": "Coca Cola",
+        "price": 41.0,
+        "image_url": "/static/images/coca_cola.jpg"
+    },
+    {
+        "product_name": "Lays Potato Chips 50g",
+        "brand": "Lays",
+        "price": 21.0,
+        "image_url": "/static/images/lays_chips.jpg"
+    }
+]

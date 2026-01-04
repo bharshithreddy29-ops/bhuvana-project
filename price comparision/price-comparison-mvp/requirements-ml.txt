@@ -1,0 +1,57 @@
+# AI/ML Enhanced Requirements for Price Comparison Project
+
+# Core Web Framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Image Processing & Computer Vision
+Pillow==10.1.0
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+
+# Deep Learning & Neural Networks
+tensorflow==2.15.0
+keras==2.15.0
+
+# Traditional Machine Learning
+scikit-learn==1.3.2
+scipy==1.11.4
+
+# Natural Language Processing
+nltk==3.8.1
+spacy==3.7.2
+gensim==4.3.2
+
+# Data Processing & Analysis
+numpy==1.24.3
+pandas==2.1.4
+joblib==1.3.2
+
+# OCR (Optical Character Recognition)
+pytesseract==0.3.10
+
+# API & Web Requests
+requests==2.31.0
+
+# Progress Bars & Utilities
+tqdm==4.66.1
+
+# Image Similarity & Hashing
+imagehash==4.3.1
+
+# Time Series Forecasting
+statsmodels==0.14.1
+
+# Plotting & Visualization (optional, for analysis)
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Model Serving & Optimization
+onnxruntime==1.16.3
+
+# Additional Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+gunicorn
+beautifulsoup4
+lxml

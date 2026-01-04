@@ -1,0 +1,32 @@
+[
+    {
+        "product_name": "Lakme Lipstick",
+        "brand": "Lakme",
+        "price": 299.0,
+        "image_url": "/static/images/lakme_lipstick.jpg"
+    },
+    {
+        "product_name": "Maybelline Mascara",
+        "brand": "Maybelline",
+        "price": 399.0,
+        "image_url": "/static/images/maybelline_mascara.jpg"
+    },
+    {
+        "product_name": "Nivea Face Cream",
+        "brand": "Nivea",
+        "price": 199.0,
+        "image_url": "/static/images/nivea_cream.jpg"
+    },
+    {
+        "product_name": "L'Oreal Shampoo",
+        "brand": "L'Oreal",
+        "price": 249.0,
+        "image_url": "/static/images/loreal_shampoo.jpg"
+    },
+    {
+        "product_name": "The Body Shop Body Lotion",
+        "brand": "The Body Shop",
+        "price": 599.0,
+        "image_url": "/static/images/body_shop_lotion.jpg"
+    }
+]

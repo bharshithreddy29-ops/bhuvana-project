@@ -1,0 +1,209 @@
+{% extends "realistic-layout.html" %}
+
+{% block title %}Categories - Shop by Category | PriceHunter{% endblock %}
+
+{% block content %}
+<div class="categories-container">
+    <div class="page-header">
+        <h1>Shop by Category</h1>
+        <p>Discover the best deals across different product categories</p>
+    </div>
+    
+    <div class="categories-grid">
+        {% for category, data in categories.items() %}
+        <div class="category-card">
+            <div class="category-icon">{{ data.icon }}</div>
+            <h3>{{ category }}</h3>
+            <p><strong>{{ data.count }}</strong> products available</p>
+            <div class="category-items">
+                {% for item in data['items'][:4] %}
+                <span class="category-tag">{{ item|title }}</span>
+                {% endfor %}
+                {% if data['items']|length > 4 %}
+                <span class="category-tag">+{{ data['items']|length - 4 }} more</span>
+                {% endif %}
+            </div>
+            <a href="{{ url_for('category_products', category_name=category.lower().replace(' & ', '').replace(' ', '')) }}" class="btn-primary">Browse {{ category }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="featured-section">
+        <h2>🔥 Trending Searches</h2>
+        <div class="popular-tags">
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="iPhone 15">
+                <button type="submit" class="popular-tag">iPhone 15</button>
+            </form>
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="Nike shoes">
+                <button type="submit" class="popular-tag">Nike Shoes</button>
+            </form>
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="MacBook">
+                <button type="submit" class="popular-tag">MacBook</button>
+            </form>
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="Jeans">
+                <button type="submit" class="popular-tag">Jeans</button>
+            </form>
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="Headphones">
+                <button type="submit" class="popular-tag">Headphones</button>
+            </form>
+            <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                <input type="hidden" name="query" value="Skincare">
+                <button type="submit" class="popular-tag">Skincare</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Category Highlights -->
+    <div style="margin-top: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #2c3e50;">Why Shop by Category?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                <h3>Targeted Results</h3>
+                <p>Find exactly what you're looking for with category-specific searches</p>
+            </div>
+            <div style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                <h3>Best Deals</h3>
+                <p>Compare prices across all major platforms in your preferred category</p>
+            </div>
+            <div style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                <h3>Quick Discovery</h3>
+                <p>Discover new products and brands you might have missed</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #e1e8ed;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.category-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.category-items {
+    margin: 1.5rem 0;
+}
+
+.category-tag {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+
+.featured-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #e1e8ed;
+}
+
+.featured-section h2 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.popular-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.popular-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.popular-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .popular-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+{% endblock %}

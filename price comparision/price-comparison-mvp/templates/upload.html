@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Upload Product Image{% endblock %}
+
+{% block content %}
+<div class="upload-section">
+    <h2>Upload Product Image for Search</h2>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <div class="file-input">
+            <input type="file" name="file" accept="image/*" required>
+        </div>
+        <button type="submit" class="btn-primary">Search by Image</button>
+    </form>
+    <p class="note">Supported formats: PNG, JPG, JPEG, GIF</p>
+</div>
+{% endblock %}

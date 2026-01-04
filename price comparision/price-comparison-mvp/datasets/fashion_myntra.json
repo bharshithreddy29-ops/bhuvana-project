@@ -1,0 +1,62 @@
+[
+    {
+        "product_name": "Nike Air Jordan 1 High",
+        "brand": "Nike",
+        "price": 12795.0,
+        "image_url": "/static/images/products/air_jordan_1.jpg"
+    },
+    {
+        "product_name": "Adidas Ultraboost 23",
+        "brand": "Adidas",
+        "price": 17999.0,
+        "image_url": "/static/images/products/ultraboost_23.jpg"
+    },
+    {
+        "product_name": "Levi's 501 Original Jeans",
+        "brand": "Levi's",
+        "price": 3999.0,
+        "image_url": "/static/images/products/levis_501.jpg"
+    },
+    {
+        "product_name": "Zara Oversized Blazer",
+        "brand": "Zara",
+        "price": 5990.0,
+        "image_url": "/static/images/products/zara_blazer.jpg"
+    },
+    {
+        "product_name": "H&M Organic Cotton T-Shirt",
+        "brand": "H&M",
+        "price": 999.0,
+        "image_url": "/static/images/products/hm_organic_tee.jpg"
+    },
+    {
+        "product_name": "Puma RS-X Sneakers",
+        "brand": "Puma",
+        "price": 8999.0,
+        "image_url": "/static/images/products/puma_rsx.jpg"
+    },
+    {
+        "product_name": "Tommy Hilfiger Polo Shirt",
+        "brand": "Tommy Hilfiger",
+        "price": 3499.0,
+        "image_url": "/static/images/products/tommy_polo.jpg"
+    },
+    {
+        "product_name": "Calvin Klein Jeans",
+        "brand": "Calvin Klein",
+        "price": 4999.0,
+        "image_url": "/static/images/products/ck_jeans.jpg"
+    },
+    {
+        "product_name": "Converse Chuck Taylor All Star",
+        "brand": "Converse",
+        "price": 3999.0,
+        "image_url": "/static/images/products/converse_chuck.jpg"
+    },
+    {
+        "product_name": "Mango Floral Dress",
+        "brand": "Mango",
+        "price": 2999.0,
+        "image_url": "/static/images/products/mango_dress.jpg"
+    }
+]

@@ -1,0 +1,16 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   app.py
+#	new file:   requirements-deploy.txt
+#	modified:   requirements.txt
+#	modified:   services/__pycache__/image_service.cpython-311.pyc
+#	new file:   services/__pycache__/image_service_simple.cpython-311.pyc
+#	new file:   services/image_service_simple.py
+#	new file:   vercel.json
+#

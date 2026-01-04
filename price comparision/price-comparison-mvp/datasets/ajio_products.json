@@ -1,0 +1,32 @@
+[
+    {
+        "product_name": "Nike Running Shoes",
+        "brand": "Nike",
+        "price": 2999.0,
+        "image_url": "/static/images/nike_shoes.jpg"
+    },
+    {
+        "product_name": "Adidas T-Shirt",
+        "brand": "Adidas",
+        "price": 1299.0,
+        "image_url": "/static/images/adidas_tshirt.jpg"
+    },
+    {
+        "product_name": "Levi's Jeans",
+        "brand": "Levi's",
+        "price": 3499.0,
+        "image_url": "/static/images/levis_jeans.jpg"
+    },
+    {
+        "product_name": "Puma Sneakers",
+        "brand": "Puma",
+        "price": 2499.0,
+        "image_url": "/static/images/puma_sneakers.jpg"
+    },
+    {
+        "product_name": "H&M Dress",
+        "brand": "H&M",
+        "price": 1999.0,
+        "image_url": "/static/images/hm_dress.jpg"
+    }
+]

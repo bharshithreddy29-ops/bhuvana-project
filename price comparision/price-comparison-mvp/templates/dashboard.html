@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>Welcome, {{ session.username }}!</h1>
+        <p>Your personalized price comparison dashboard</p>
+    </div>
+    
+    <div class="dashboard-stats">
+        <div class="stat-card">
+            <h3>{{ alerts|length }}</h3>
+            <p>Active Alerts</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ wishlist|length }}</h3>
+            <p>Wishlist Items</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ recent_searches|length }}</h3>
+            <p>Recent Searches</p>
+        </div>
+    </div>
+    
+    <div class="dashboard-grid">
+        <div class="dashboard-section">
+            <h2>Recent Searches</h2>
+            {% if recent_searches %}
+                <div class="search-list">
+                    {% for search in recent_searches %}
+                    <div class="search-item">
+                        <span class="search-query">{{ search.query }}</span>
+                        <span class="search-date">{{ search.timestamp[:10] }}</span>
+                        <a href="{{ url_for('search') }}?q={{ search.query }}" class="btn-small">Search Again</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No recent searches</p>
+            {% endif %}
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Price Alerts</h2>
+            {% if alerts %}
+                <div class="alert-list">
+                    {% for alert in alerts %}
+                    <div class="alert-item">
+                        <strong>{{ alert.product_name }}</strong>
+                        <span class="alert-threshold">Below ₹{{ "%.2f"|format(alert.threshold) }}</span>
+                        <form method="post" action="{{ url_for('alerts') }}" style="display: inline;">
+                            <input type="hidden" name="delete_alert_id" value="{{ alert.id }}">
+                            <button type="submit" class="btn-small btn-danger">Remove</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No active alerts</p>
+            {% endif %}
+            <a href="{{ url_for('alerts') }}" class="btn-primary">Manage Alerts</a>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Wishlist</h2>
+            {% if wishlist %}
+                <div class="wishlist-grid">
+                    {% for item in wishlist[:4] %}
+                    <div class="wishlist-item">
+                        <img src="{{ item.image_url or '/static/images/placeholder.jpg' }}" alt="{{ item.product_name }}">
+                        <h4>{{ item.product_name }}</h4>
+                        <p class="platform">{{ item.platform }}</p>
+                        <p class="price">₹{{ "%.2f"|format(item.price) }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No items in wishlist</p>
+            {% endif %}
+            <a href="{{ url_for('wishlist') }}" class="btn-primary">View All</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.dashboard-header h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.search-item, .alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wishlist-item {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+}
+
+.wishlist-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-small.btn-danger {
+    background: #dc3545;
+}
+
+.empty-state {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+}
+</style>
+{% endblock %}

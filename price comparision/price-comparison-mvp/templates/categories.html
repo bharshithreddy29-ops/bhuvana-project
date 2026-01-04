@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+<div class="categories-container">
+    <div class="page-header">
+        <h1>Shop by Category</h1>
+        <p>Discover the best deals across different product categories</p>
+    </div>
+    
+    <div class="categories-grid">
+        {% for category, items in categories.items() %}
+        <div class="category-card">
+            <div class="category-icon">
+                {% if category == 'Groceries' %}🛒
+                {% elif category == 'Electronics' %}📱
+                {% elif category == 'Fashion' %}👕
+                {% elif category == 'Home & Kitchen' %}🏠
+                {% elif category == 'Beauty' %}💄
+                {% elif category == 'Sports' %}⚽
+                {% endif %}
+            </div>
+            <h3>{{ category }}</h3>
+            <p>{{ items|length }} subcategories</p>
+            <div class="category-items">
+                {% for item in items[:3] %}
+                <span class="category-tag">{{ item|title }}</span>
+                {% endfor %}
+                {% if items|length > 3 %}
+                <span class="category-tag">+{{ items|length - 3 }} more</span>
+                {% endif %}
+            </div>
+            <a href="{{ url_for('category_products', category_name=category.lower().replace(' & ', '').replace(' ', '')) }}" class="btn-primary">Browse {{ category }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="featured-section">
+        <h2>Popular Searches</h2>
+        <div class="popular-tags">
+            <a href="{{ url_for('search') }}?q=milk" class="popular-tag">Milk</a>
+            <a href="{{ url_for('search') }}?q=shoes" class="popular-tag">Shoes</a>
+            <a href="{{ url_for('search') }}?q=phone" class="popular-tag">Phone</a>
+            <a href="{{ url_for('search') }}?q=jeans" class="popular-tag">Jeans</a>
+            <a href="{{ url_for('search') }}?q=laptop" class="popular-tag">Laptop</a>
+            <a href="{{ url_for('search') }}?q=bread" class="popular-tag">Bread</a>
+            <a href="{{ url_for('search') }}?q=headphones" class="popular-tag">Headphones</a>
+            <a href="{{ url_for('search') }}?q=dress" class="popular-tag">Dress</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.category-items {
+    margin: 1rem 0;
+}
+
+.category-tag {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin: 0.25rem;
+}
+
+.featured-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.featured-section h2 {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.popular-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.popular-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.popular-tag:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .popular-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+{% endblock %}

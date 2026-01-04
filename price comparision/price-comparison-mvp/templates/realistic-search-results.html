@@ -1,0 +1,293 @@
+{% extends "realistic-layout.html" %}
+
+{% block title %}{{ query }} - Search Results | PriceHunter{% endblock %}
+
+{% block content %}
+<!-- Search Header -->
+<section class="search-header">
+    <div class="container">
+        <h1 class="search-title">Search Results for "{{ query }}"</h1>
+        <div class="search-meta">
+            {% if results %}
+            Found {{ results|length }} products • Showing best prices across 11+ platforms
+            {% else %}
+            No products found • Try different keywords or browse categories
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% if results %}
+<!-- Filters Section -->
+<section class="filters-section">
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">All Results ({{ results|length
+                }})</button>
+            <button class="filter-btn" onclick="filterProducts('best-price')">Best Prices Only</button>
+            <button class="filter-btn" onclick="filterProducts('amazon')">Amazon</button>
+            <button class="filter-btn" onclick="filterProducts('flipkart')">Flipkart</button>
+            <button class="filter-btn" onclick="filterProducts('myntra')">Myntra</button>
+            <button class="filter-btn" onclick="filterProducts('blinkit')">Blinkit</button>
+            <button class="filter-btn" onclick="sortProducts('price-low')">Price: Low to High</button>
+            <button class="filter-btn" onclick="sortProducts('price-high')">Price: High to Low</button>
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section style="padding: 2rem 0;">
+    <div class="container">
+        <div class="product-grid" id="products-grid">
+            {% for product in results %}
+            <div class="product-card {{ 'best-price' if product.is_best_price else '' }}"
+                data-platform="{{ product.platform }}" data-price="{{ product.price }}"
+                data-best-price="{{ 'true' if product.is_best_price else 'false' }}">
+
+                <img src="{{ product.image_url or '/static/images/products/placeholder.jpg' }}"
+                    alt="{{ product.product_name }}" class="product-image"
+                    onerror="this.src='/static/images/products/placeholder.jpg'">
+
+                <div class="product-info">
+                    <div class="platform-badge platform-{{ product.platform }}">
+                        {{ product.platform|title }}
+                        {% if product.is_best_price %}
+                        <span style="margin-left: 0.5rem;">🏆</span>
+                        {% endif %}
+                    </div>
+
+                    <h3 class="product-name">{{ product.product_name }}</h3>
+                    <p class="product-brand">by {{ product.brand }}</p>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin: 1rem 0;">
+                        <div class="product-price">₹{{ "%.2f"|format(product.price) }}</div>
+                        {% if product.is_best_price %}
+                        <div
+                            style="background: #27ae60; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">
+                            LOWEST PRICE
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Price Comparison -->
+                    {% set other_prices = results | selectattr('product_name', 'equalto', product.product_name) | list
+                    %}
+                    {% if other_prices|length > 1 %}
+                    <div
+                        style="background: #f8f9fa; padding: 0.5rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.8rem;">
+                        <strong>Price Comparison:</strong><br>
+                        {% for other in other_prices[:3] %}
+                        {% if other.platform != product.platform %}
+                        <span style="color: #7f8c8d;">{{ other.platform|title }}: ₹{{ "%.2f"|format(other.price)
+                            }}</span><br>
+                        {% endif %}
+                        {% endfor %}
+                        {% if other_prices|length > 3 %}
+                        <span style="color: #3498db;">+{{ other_prices|length - 3 }} more platforms</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <div class="product-actions">
+                        <a href="{{ url_for('redirect_to_platform', platform=product.platform, product_name=product.product_name) }}"
+                            class="btn-primary" target="_blank"
+                            onclick="trackClick('{{ product.platform }}', '{{ product.product_name }}')">
+                            View on {{ product.platform|title }}
+                        </a>
+
+                        <button class="ar-preview-btn" title="View in 3D/AR">
+                            🕰 3D Preview
+                        </button>
+
+                        <button class="ar-preview-btn"
+                            style="background: linear-gradient(135deg, #8e44ad, #9b59b6); border: none;"
+                            onclick="showPricePrediction('{{ product.product_name }}', '{{ product.platform }}')"
+                            title="See future price trends">
+                            📈 Price Forecast
+                        </button>
+
+                        {% if session.user_id %}
+                        <form method="post" action="{{ url_for('wishlist') }}" style="display: inline;">
+                            <input type="hidden" name="action" value="add">
+                            <input type="hidden" name="product_name" value="{{ product.product_name }}">
+                            <input type="hidden" name="platform" value="{{ product.platform }}">
+                            <input type="hidden" name="price" value="{{ product.price }}">
+                            <input type="hidden" name="image_url" value="{{ product.image_url }}">
+                            <button type="submit" class="btn-wishlist">❤️ Save</button>
+                        </form>
+                        {% endif %}
+                    </div>
+
+                    <!-- Savings Calculator -->
+                    {% if product.is_best_price and other_prices|length > 1 %}
+                    {% set max_price = other_prices | map(attribute='price') | max %}
+                    {% set savings = max_price - product.price %}
+                    {% if savings > 0 %}
+                    <div
+                        style="background: #d4edda; color: #155724; padding: 0.5rem; border-radius: 4px; margin-top: 0.5rem; font-size: 0.9rem; text-align: center;">
+                        💰 You save ₹{{ "%.2f"|format(savings) }} by choosing this option!
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Load More Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <button class="btn-primary" onclick="loadMoreProducts()" style="padding: 1rem 2rem;">
+                Load More Products
+            </button>
+        </div>
+    </div>
+</section>
+
+{% else %}
+<!-- No Results -->
+<section style="padding: 4rem 0; text-align: center;">
+    <div class="container">
+        <div style="background: white; padding: 4rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
+            <h2 style="color: #2c3e50; margin-bottom: 1rem;">No Products Found</h2>
+            <p style="color: #7f8c8d; margin-bottom: 2rem;">
+                {{ message or "We couldn't find any products matching your search. Try different keywords or browse our
+                categories." }}
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="{{ url_for('index') }}" class="btn-primary">🏠 Go Home</a>
+                <a href="{{ url_for('categories') }}" class="btn-primary" style="background: #e74c3c;">📂 Browse
+                    Categories</a>
+                <a href="{{ url_for('upload') }}" class="btn-primary" style="background: #f39c12;">📷 Try Image
+                    Search</a>
+            </div>
+
+            <!-- Suggested Searches -->
+            <div style="margin-top: 3rem;">
+                <h3 style="margin-bottom: 1rem; color: #2c3e50;">Try These Popular Searches:</h3>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+                    <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="query" value="milk">
+                        <button type="submit" class="filter-btn">Milk</button>
+                    </form>
+                    <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="query" value="shoes">
+                        <button type="submit" class="filter-btn">Shoes</button>
+                    </form>
+                    <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="query" value="phone">
+                        <button type="submit" class="filter-btn">Phone</button>
+                    </form>
+                    <form action="{{ url_for('search') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="query" value="laptop">
+                        <button type="submit" class="filter-btn">Laptop</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<script>
+    // Filter and Sort Functions
+    function filterProducts(filter) {
+        const products = document.querySelectorAll('.product-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        // Update active button
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        products.forEach(product => {
+            let show = false;
+
+            if (filter === 'all') {
+                show = true;
+            } else if (filter === 'best-price') {
+                show = product.dataset.bestPrice === 'true';
+            } else {
+                show = product.dataset.platform === filter;
+            }
+
+            product.style.display = show ? 'block' : 'none';
+        });
+    }
+
+    function sortProducts(sortType) {
+        const grid = document.getElementById('products-grid');
+        const products = Array.from(grid.children);
+
+        products.sort((a, b) => {
+            const priceA = parseFloat(a.dataset.price);
+            const priceB = parseFloat(b.dataset.price);
+
+            if (sortType === 'price-low') {
+                return priceA - priceB;
+            } else if (sortType === 'price-high') {
+                return priceB - priceA;
+            }
+            return 0;
+        });
+
+        products.forEach(product => grid.appendChild(product));
+    }
+
+    function trackClick(platform, productName) {
+        // Track user clicks for analytics
+        console.log(`User clicked: ${productName} on ${platform}`);
+        // In real implementation, send to analytics service
+    }
+
+    function loadMoreProducts() {
+        // Simulate loading more products
+        const button = event.target;
+        button.innerHTML = '<span class="loading"></span> Loading...';
+        button.disabled = true;
+
+        setTimeout(() => {
+            button.innerHTML = 'Load More Products';
+            button.disabled = false;
+            // In real implementation, load more products via AJAX
+        }, 2000);
+    }
+
+    function showPricePrediction(productName, platform) {
+        // Show loading state
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '🔄 Analyzing...';
+        btn.disabled = true;
+
+        fetch(`/api/predict-price?product=${encodeURIComponent(productName)}&platform=${platform}&days=7`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Analysis failed: ' + data.error);
+                    return;
+                }
+
+                const pred = data.prediction;
+                const rec = data.buy_recommendation;
+
+                let message = `Price Analysis for ${data.product}\n\n`;
+                message += `Current Price: ₹${pred.current_price}\n`;
+                message += `Predicted Change (7 days): ${pred.predicted_change >= 0 ? '📈 +₹' : '📉 -₹'}${Math.abs(pred.predicted_change).toFixed(2)}\n`;
+                message += `Confidence: ${(pred.confidence * 100).toFixed(0)}%\n\n`;
+                message += `Recommendation: ${rec.recommendation.toUpperCase().replace('_', ' ')}\n`;
+                message += `Reason: ${rec.reason}`;
+
+                alert(message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to get prediction. Please try again.');
+            })
+            .finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+    }
+</script>
+{% endblock %}

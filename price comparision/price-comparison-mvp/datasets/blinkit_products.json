@@ -1,0 +1,44 @@
+[
+    {
+        "product_name": "Amul Milk 1L",
+        "brand": "Amul",
+        "price": 60.0,
+        "image_url": "/static/images/amul_milk.jpg"
+    },
+    {
+        "product_name": "Nestle Maggi Noodles 280g",
+        "brand": "Nestle",
+        "price": 40.0,
+        "image_url": "/static/images/maggi.jpg"
+    },
+    {
+        "product_name": "Britannia Bread 400g",
+        "brand": "Britannia",
+        "price": 30.0,
+        "image_url": "/static/images/britannia_bread.jpg"
+    },
+    {
+        "product_name": "Coca Cola 600ml",
+        "brand": "Coca Cola",
+        "price": 40.0,
+        "image_url": "/static/images/coca_cola.jpg"
+    },
+    {
+        "product_name": "Lays Potato Chips 50g",
+        "brand": "Lays",
+        "price": 18.0,
+        "image_url": "/static/images/lays_chips.jpg"
+    },
+    {
+        "product_name": "Fresh Bananas 1kg",
+        "brand": "Fresh",
+        "price": 45.0,
+        "image_url": "/static/images/bananas.jpg"
+    },
+    {
+        "product_name": "Tata Salt 1kg",
+        "brand": "Tata",
+        "price": 22.0,
+        "image_url": "/static/images/tata_salt.jpg"
+    }
+]

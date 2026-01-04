@@ -1,0 +1,62 @@
+[
+    {
+        "product_name": "Lakme Absolute Foundation",
+        "brand": "Lakme",
+        "price": 1050.0,
+        "image_url": "/static/images/products/lakme_foundation.jpg"
+    },
+    {
+        "product_name": "Nykaa Matte Lipstick",
+        "brand": "Nykaa",
+        "price": 499.0,
+        "image_url": "/static/images/products/nykaa_lipstick.jpg"
+    },
+    {
+        "product_name": "Himalaya Face Wash",
+        "brand": "Himalaya",
+        "price": 145.0,
+        "image_url": "/static/images/products/himalaya_facewash.jpg"
+    },
+    {
+        "product_name": "Olay Regenerist Serum",
+        "brand": "Olay",
+        "price": 1999.0,
+        "image_url": "/static/images/products/olay_serum.jpg"
+    },
+    {
+        "product_name": "L'Oreal Paris Shampoo",
+        "brand": "L'Oreal",
+        "price": 399.0,
+        "image_url": "/static/images/products/loreal_shampoo.jpg"
+    },
+    {
+        "product_name": "Maybelline Mascara",
+        "brand": "Maybelline",
+        "price": 699.0,
+        "image_url": "/static/images/products/maybelline_mascara.jpg"
+    },
+    {
+        "product_name": "Neutrogena Sunscreen SPF 50",
+        "brand": "Neutrogena",
+        "price": 849.0,
+        "image_url": "/static/images/products/neutrogena_sunscreen.jpg"
+    },
+    {
+        "product_name": "The Body Shop Body Butter",
+        "brand": "The Body Shop",
+        "price": 1695.0,
+        "image_url": "/static/images/products/tbs_body_butter.jpg"
+    },
+    {
+        "product_name": "Plum Green Tea Face Mask",
+        "brand": "Plum",
+        "price": 345.0,
+        "image_url": "/static/images/products/plum_face_mask.jpg"
+    },
+    {
+        "product_name": "Forest Essentials Face Oil",
+        "brand": "Forest Essentials",
+        "price": 2250.0,
+        "image_url": "/static/images/products/fe_face_oil.jpg"
+    }
+]

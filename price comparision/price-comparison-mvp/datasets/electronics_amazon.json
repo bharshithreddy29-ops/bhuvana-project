@@ -1,0 +1,72 @@
+[
+    {
+        "product_name": "iPhone 15 Pro 256GB",
+        "brand": "Apple",
+        "price": 134900.0,
+        "category": "smartphones",
+        "image_url": "/static/images/products/iphone15_pro.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy S24 Ultra",
+        "brand": "Samsung", 
+        "price": 129999.0,
+        "category": "smartphones",
+        "image_url": "/static/images/products/galaxy_s24_ultra.jpg"
+    },
+    {
+        "product_name": "MacBook Pro 14-inch M3",
+        "brand": "Apple",
+        "price": 199900.0,
+        "category": "laptops",
+        "image_url": "/static/images/products/macbook_pro_14.jpg"
+    },
+    {
+        "product_name": "Dell XPS 15 Laptop",
+        "brand": "Dell",
+        "price": 159990.0,
+        "category": "laptops",
+        "image_url": "/static/images/products/dell_xps_15.jpg"
+    },
+    {
+        "product_name": "Sony WH-1000XM5 Headphones",
+        "brand": "Sony",
+        "price": 29990.0,
+        "category": "headphones",
+        "image_url": "/static/images/products/sony_wh1000xm5.jpg"
+    },
+    {
+        "product_name": "iPad Air 11-inch 256GB",
+        "brand": "Apple",
+        "price": 74900.0,
+        "category": "tablets",
+        "image_url": "/static/images/products/ipad_air_11.jpg"
+    },
+    {
+        "product_name": "Canon EOS R8 Camera",
+        "brand": "Canon",
+        "price": 179990.0,
+        "category": "cameras",
+        "image_url": "/static/images/products/canon_eos_r8.jpg"
+    },
+    {
+        "product_name": "LG 65-inch OLED TV",
+        "brand": "LG",
+        "price": 149990.0,
+        "category": "televisions",
+        "image_url": "/static/images/products/lg_oled_65.jpg"
+    },
+    {
+        "product_name": "Apple Watch Series 9",
+        "brand": "Apple",
+        "price": 41900.0,
+        "category": "smartwatches",
+        "image_url": "/static/images/products/apple_watch_9.jpg"
+    },
+    {
+        "product_name": "Samsung 55-inch Neo QLED",
+        "brand": "Samsung",
+        "price": 89990.0,
+        "category": "televisions",
+        "image_url": "/static/images/products/samsung_neo_qled.jpg"
+    }
+]

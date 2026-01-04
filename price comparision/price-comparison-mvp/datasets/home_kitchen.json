@@ -1,0 +1,62 @@
+[
+    {
+        "product_name": "Philips Air Fryer HD9252",
+        "brand": "Philips",
+        "price": 12995.0,
+        "image_url": "/static/images/products/philips_air_fryer.jpg"
+    },
+    {
+        "product_name": "Prestige Induction Cooktop",
+        "brand": "Prestige",
+        "price": 2999.0,
+        "image_url": "/static/images/products/prestige_induction.jpg"
+    },
+    {
+        "product_name": "IKEA HEMNES Bed Frame",
+        "brand": "IKEA",
+        "price": 15990.0,
+        "image_url": "/static/images/products/ikea_hemnes.jpg"
+    },
+    {
+        "product_name": "Godrej 190L Refrigerator",
+        "brand": "Godrej",
+        "price": 18990.0,
+        "image_url": "/static/images/products/godrej_fridge.jpg"
+    },
+    {
+        "product_name": "Bajaj Mixer Grinder 750W",
+        "brand": "Bajaj",
+        "price": 3499.0,
+        "image_url": "/static/images/products/bajaj_mixer.jpg"
+    },
+    {
+        "product_name": "Urban Ladder Dining Table",
+        "brand": "Urban Ladder",
+        "price": 24999.0,
+        "image_url": "/static/images/products/ul_dining_table.jpg"
+    },
+    {
+        "product_name": "Whirlpool Washing Machine",
+        "brand": "Whirlpool",
+        "price": 22990.0,
+        "image_url": "/static/images/products/whirlpool_washing.jpg"
+    },
+    {
+        "product_name": "Hawkins Pressure Cooker 5L",
+        "brand": "Hawkins",
+        "price": 2199.0,
+        "image_url": "/static/images/products/hawkins_cooker.jpg"
+    },
+    {
+        "product_name": "Nilkamal Plastic Chair Set",
+        "brand": "Nilkamal",
+        "price": 3999.0,
+        "image_url": "/static/images/products/nilkamal_chairs.jpg"
+    },
+    {
+        "product_name": "Borosil Glass Dinner Set",
+        "brand": "Borosil",
+        "price": 1899.0,
+        "image_url": "/static/images/products/borosil_dinner_set.jpg"
+    }
+]
